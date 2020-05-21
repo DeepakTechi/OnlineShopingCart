@@ -1,0 +1,113 @@
+
+    <div class="jumbotron">
+        <div class="container">
+        <div class="col-md-7">
+        <table class="table">
+            <thead >Cart Item list</thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Price(kg)</th>
+                <th>quantity</th>
+                <th>quantity</th>
+                <th>Value</th>
+
+            </tr>
+            <tbody >
+              <tr *ngFor="let cartItem of addvalue">
+                <td><img src="{{cartItem.picture}}"></td>
+                <td>{{cartItem.name}}</td>
+                <td>{{cartItem.price}}</td>
+                <td>{{cartItem.quantity}}</td>
+                
+                <td>
+                    <button (click)="countCart(cartItem.name,'sub')"><i class="glyphicon glyphicon-minus">  </i></button>
+                    <button (click)="countCart(cartItem.name,'add')"> <i class="glyphicon glyphicon-plus">  </i> </button>
+                </td>
+                <td>{{cartItem.value}}</td>
+            </tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="col-md-5" style="border-left:6px solid black;height: 350px;position: fixed;left: 700px;">
+              <div class="total" >
+                  <p style="color: green;font-size: 25px;">Total Price:-
+                  </p>
+                  <input type="number" value="{{totalValue}}" 
+                  style="position: absolute;height: 50px;width: 300px;border-radius: 20px; text-align: center;font-size: 30px;" disabled>
+                  <hr style="border:2px solid blue;position: absolute;top: 90px;width: 300px;" >
+              </div>
+            <button class="btn btn-danger btn-lg"  style="width: 200px;height: 50px;position: absolute;right: 250px;top: 150px;
+            font-size: 20px;" data-toggle="modal" data-target="#myModal1"
+             >Check Out</button>
+          </div>
+     </div>
+    </div>
+     <div class="cartbtn">
+        <button class="btn btn-info"  style="width: 200px;height: 50px;position: absolute;right: 420px;
+        font-size: 20px;" routerLink="/home" >Back to Home</button>
+        <button class="btn btn-info" style="width: 200px; height: 50px;font-size: 20px; position: absolute;right: 210px;"
+        routerLink="/header" >Back to Fruits</button>
+        <button class="btn btn-info"  style="width: 200px;height: 50px;
+        font-size: 20px;" routerLink="/vegetables" >Back to Vegetables</button>
+        
+     </div>
+
+     
+     <div id="myModal1" class="modal" role="dialog" >
+        <div class="modal-dialog modal-lg modal-dialog-centered" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title" style="position: absolute;left: 100px; font-size: 30px;color:blue;">CheckOut</h4>
+            </div>
+            <div class="modal-body">
+                <label style="font-size: 25px;">
+                    Address <span style="position: absolute; right: 100px;font-size: 25px;">TotalPrice:{{totalValue}}</span>
+                </label><br> <br>
+                <label>Full Name :</label>
+                <input type="text" placeholder="Enter your name"><span>
+                    <label>Contact Number :</label>
+              <input type="number" placeholder="Ennter your number">
+              </span>
+              <br> <br> 
+              <textarea placeholder="enter your full address" style="width: 545px"></textarea>
+              <div style="font-size: 25px;">Payment option</div>
+              <button type="button">credit  card and debit card</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning btn-lg" (click)="clearCart()"  style="width: 200px; height: 50px; font-size: 20px;" >
+                    Proceed to Order</button>
+                 <button type="button" class="btn btn-danger btn-lg"   data-dismiss="modal" style="width: 100px; height: 50px; font-size: 20px;" #closeButton>
+                Close</button>
+            </div>
+          </div>
+      </div>
+    </div>
+ 
+  
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

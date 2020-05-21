@@ -1,0 +1,212 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body style="background-color: darkblue;">
+        <div class="container-fluid">
+                 
+            <h1>Vegetables<span>
+            <button type="button" class="btn btn-warning btn-lg" (click)="gotoCart()" 
+            style="width: 200px; height: 50px; font-size: 20px;position: absolute;right: 200px;margin: 10px;">
+            Go to Cart</button></span></h1>
+                <div class="row" style="background-color: burlywood;margin: 10px;">
+                    <div class="div1">
+                    <div class="col-sm-2" (click)="vegShow('cauliflower','45','../assets/cauliflower.jpg')">
+                        <a href="../assets/cauliflower.jpg"  data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/cauliflower.jpg"class = "img-responsive">
+                        <div class="caption" >
+                            <p>cauliflower</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-2" (click)="vegShow('Onion','55','../assets/Onions.jpeg')">
+                        <a href="../assets/Onions.jpeg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Onions.jpeg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Onions</p>
+                        </div> 
+                        </a> 
+                    </div>
+                    <div class="col-sm-2" (click)="vegShow('Potato','40','../assets/Potato.jpg')">
+                        <a href="../assets/Potato.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Potato.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Potato</p>
+                        </div>  
+                        </a>
+                    </div>
+                    <div class="col-sm-2" (click)="vegShow('Garlic','155','../assets/Garlic.jpg')">
+                        <a href="../assets/Garlic.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Garlic.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Garlic</p>
+                        </div>  
+                        </a>
+                    </div>
+                    <div class="col-sm-2" (click)="vegShow('green-cabbage','37','../assets/green-cabbage.jpg')">
+                        <a href="../assets/green-cabbage.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/green-cabbage.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>green-cabbage</p>
+                        </div> 
+                        </a> 
+                    </div>
+                    <div class="col-sm-2" (click)="vegShow('ginger','95','../assets/ginger.jpg')">
+                        <a href="../assets/ginger.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/ginger.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>ginger</p>
+                        </div>
+                        </a>  
+                    </div>
+                    </div>
+            </div>
+            <div class="row" style="background-color: #deb887;margin: 10px;">
+                <div class="div1">
+                <div class="col-sm-2" (click)="vegShow('capsicum','65','../assets/capsicum.jpg')">
+                    <a href="../assets/capsicum.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="../assets/capsicum.jpg"  class = "img-responsive">
+                    <div class="caption">
+                        <p>capsicum</p>
+                    </div> 
+                    </a> 
+                </div>
+                <div class="col-sm-2" (click)="vegShow('carrot','38','../assets/carrots-vegetables.jpg')">
+                    <a href="../assets/carrots-vegetables.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="../assets/carrots-vegetables.jpg"  class = "img-responsive">
+                    <div class="caption">
+                        <p>carrot</p>
+                    </div> 
+                    </a> 
+                </div>
+                <div class="col-sm-2" (click)="vegShow('chilli','115','../assets/Chilli.jpg')">
+                    <a href="../assets/Chilli.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="../assets/Chilli.jpg"  class = "img-responsive">
+                    <div class="caption">
+                        <p>chilli</p>
+                    </div> 
+                    </a> 
+                </div>
+                <div class="col-sm-2" (click)="vegShow('Eggplant','40','../assets/Eggplant.jpg')">
+                    <a href="../assets/Eggplant.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="../assets/Eggplant.jpg"  class = "img-responsive">
+                    <div class="caption">
+                        <p>Eggplant</p>
+                    </div>
+                    </a>  
+                </div>
+                <div class="col-sm-2" (click)="vegShow('Lemon','70','../assets/Lemon, Lime.jpg')">
+                    <a href="../assets/Lemon, Lime.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="../assets/Lemon, Lime.jpg"  class = "img-responsive">
+                    <div class="caption">
+                        <p>Lemon</p>
+                    </div>  
+                    </a>
+                </div>
+                <div class="col-sm-2" (click)="vegShow('FavaBeans','55','../assets/Fava Beans, Broad Beans, Horse Beans.jpg')">
+                    <a href="../assets/Fava Beans, Broad Beans, Horse Beans.jpg" data-toggle="modal" data-target="#myModal">
+                    <img src="../assets/Fava Beans, Broad Beans, Horse Beans.jpg" class = "img-responsive" >
+                    <div class="caption">
+                        <p>FavaBeans</p>
+                    </div>
+                    </a>  
+                </div>
+                </div>
+        </div>
+        <div class="row" style="background-color: burlywood;margin: 10px;">
+            <div class="div1">
+            <div class="col-sm-2" (click)="vegShow('LadyFinger','65','../assets/Lady_Finger.jpg')">
+                <a href="../assets/Lady_Finger.jpg" data-toggle="modal" data-target="#myModal">
+                <img src="../assets/Lady_Finger.jpg"  class = "img-responsive">
+                <div class="caption">
+                    <p>LadyFinger</p>
+                </div>  
+                </a>
+            </div>
+            <div class="col-sm-2" (click)="vegShow('Turmeric','200','../assets/Turmeric.jpg')">
+                <a href="../assets/Turmeric.jpg" data-toggle="modal" data-target="#myModal">
+                <img src="../assets/Turmeric.jpg" class = "img-responsive" >
+                <div class="caption">
+                    <p>Turmeric</p>
+                </div>
+                </a>  
+            </div>
+            <div class="col-sm-2" (click)="vegShow('Tomato','25','../assets/Tomato.jpg')">
+                <a href="../assets/Tomato.jpg" data-toggle="modal" data-target="#myModal">
+                <img src="../assets/Tomato.jpg"  class = "img-responsive">
+                <div class="caption">
+                    <p>Tomato</p>
+                </div>  
+                </a>
+            </div>
+            <div class="col-sm-2" (click)="vegShow('Radish','30','../assets/radish.jpg')">
+                <a href="../assets/radish.jpg" data-toggle="modal" data-target="#myModal">
+                <img src="../assets/radish.jpg"  class = "img-responsive">
+                <div class="caption">
+                    <p>Radish</p>
+                </div> 
+                </a> 
+            </div>
+            <div class="col-sm-2" (click)="vegShow('Pointed Gourd','35','../assets/Pointed Gourd.jpg')">
+                <a href="../assets/Pointed Gourd.jpg" data-toggle="modal" data-target="#myModal">
+                <img src="../assets/Pointed Gourd.jpg"  class = "img-responsive">
+                <div class="caption">
+                    <p>Pointed Gourd</p>
+                </div>  
+                </a>
+            </div>
+            <div class="col-sm-2" (click)="vegShow('GreenBeans','110','../assets/Green beans.jpg')">
+                <a href="../assets/Green beans.jpg" data-toggle="modal" data-target="#myModal">
+                <img src="../assets/Green beans.jpg"  class = "img-responsive">
+                <div class="caption">
+                    <p>GreenBeans</p>
+                </div>
+                </a>  
+            </div>
+            </div>
+              </div>
+              
+              <div id="myModal" class="modal" role="dialog" >
+                <div class="modal-dialog modal-lg modal-dialog-centered" >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 *ngIf="addShow" >  <span class="glyphicon glyphicon-ok"></span>Added To cart</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Vegetable Detail</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <div class="col-sm-4">
+                        <label>
+                            Quantity(in kgs):
+                        </label>
+                        <input type="number" (keyup)="calculatePrice($event)" value="{{vegdetail.quantity}}" >
+
+                      <p  class="p1">1 kg={{vegdetail.Price}}</p>
+                      
+                      <div  style="position: absolute;top: 120px;left:15px;">
+                      <label>Total Price:</label>
+                      <input type="number"  value={{value}}  disabled>
+                     </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <p>{{vegdetail.Name}}</p>
+                            </div>
+                     <div class="col-sm-4">
+                     <img src="{{vegdetail.img}}" class = "img-responsive"> 
+                     </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning btn-lg"   (click)="addtoCart()" [disabled]="addShow" style="width: 200px; height: 50px; font-size: 20px;" >
+                            Add to Cart</button>
+                      <button type="button" class="btn btn-danger btn-lg"   data-dismiss="modal" style="width: 100px; height: 50px; font-size: 20px;" #closeButton>
+                        Close</button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+           </div>  
+    </body>
+</html>

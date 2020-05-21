@@ -1,0 +1,52 @@
+
+
+.card-signin {
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 
+    0 10px 16px 0 rgba(0, 0, 0, 0.1),
+    0 15px 20px 0 rgba(0, 0, 0, 0.1),
+    0 20px 25px 0 rgba(0, 0, 0, 0.1),
+    0 25px 30px 0 rgba(0, 0, 0, 0.1),
+    0 30px 35px 0 rgba(0, 0, 0, 0.1),
+    0 35px 40px 0 rgba(0, 0, 0, 0.1);
+    min-height: 500px;
+  width: 100%;
+  margin: 100px auto;
+  background: greenyellow;
+  border-radius: 5px;
+  position: absolute;
+    left: 150px;
+    top: 50px;
+ }
+  .card-signin .card-title {
+    margin-bottom: 32px;
+    font-weight: 300;
+    font-size: 24px;
+  }
+  .card-signin .card-body {
+    padding: 32px;
+  }
+  
+  .form-signin {
+    width: 100%;
+  }
+  .form-label-group {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  .form-label-group input{
+      height: auto;
+      border-radius: 32px;
+  }
+p{
+  text-align: center;
+}
+body {
+  background-color: blue !important;
+  position: fixed;
+}
+.forgotpwd{
+  position: absolute;
+  left: 250px;
+}

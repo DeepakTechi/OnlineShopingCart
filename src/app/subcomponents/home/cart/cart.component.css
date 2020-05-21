@@ -1,0 +1,47 @@
+
+  .jumbotron{
+      position:fixed;
+       height: 450px;
+      margin: 20px;
+      width: 1000px;
+      left: 100px;
+      overflow: scroll;
+      background-color: white;
+      border: 2px solid black;
+  }
+  img{
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+  }
+  thead{
+    font-size: 40px;
+    color: lightcoral;
+    position: absolute;
+    left: 150px;
+    top: -50px;
+  }
+  th{ 
+    color: blue;
+    font-size: 20px;
+  }
+  .cartbtn{
+    position: absolute;
+    right: 200px;
+    bottom: 10px;
+  }
+  td{
+    font-size: 20px;
+  }
+  .total{
+    position: absolute;
+    left: 50px;
+    font-size: 20px;
+    top: 30px;
+  }
+  .table{
+    position: absolute;
+    left: -5px;
+  }
+ 
+  

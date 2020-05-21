@@ -1,0 +1,228 @@
+
+    <html>
+        <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        </head>
+        <body style="background-color: darkblue;">
+            
+            <div class="container-fluid">
+                <h1>Fruits
+                <span>
+                <button type="button" class="btn btn-warning btn-lg" (click)="gotoCart()" 
+                style="width: 200px; height: 50px; font-size: 20px;position: absolute;right: 200px;margin: -10px;">
+                Go to Cart</button></span></h1>
+                <div class="row" style="background-color: burlywood;margin: 10px;">
+                    <div class="div1">
+                    <div class="col-sm-2" (click)="vegShow('Apple','215','../assets/apple.webp')">
+                        <a href="../assets/apple.webp" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/apple.webp" alt="Apple" class = "img-responsive">
+                        <div class="caption">
+                            <p>Apple</p>
+                        </div> 
+                        </a>
+                        </div>
+                        
+                        <div class="col-sm-2"  (click)="vegShow('Banana','68','../assets/banana.jpg')">
+                            <a href="../assets/banana.jpg" data-toggle="modal" data-target="#myModal">
+                            <img src="../assets/banana.jpg"  class = "img-responsive">
+                            <div class="caption">
+                                <p>Banana</p>
+                            </div> 
+                            </a> 
+                      </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Grape','120','../assets/grape.webp')">
+                        <a href="../assets/grape.webp" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/grape.webp" class = "img-responsive" >
+                        <div class="caption">
+                            <p>Grape</p>
+                        </div>
+                        </a>  
+                    </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Mango','85','../assets/mango.jpg')">
+                        <a href="../assets/mango.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/mango.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Mango</p>
+                        </div>  
+                        </a>
+                    </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Papaya','45','../assets/Papaya.jpg')">
+                        <a href="../assets/Papaya.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Papaya.jpg" class = "img-responsive">
+                        <div class="caption">
+                            <p>Papaya</p>
+                        </div>
+                        </a>  
+                    </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Orange','77','../assets/Orange.jpg')">
+                        <a href="../assets/Orange.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Orange.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Orange</p>
+                        </div>  
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="row" style="background-color: burlywood;margin: 10px;">
+                    <div class="div1">
+                    <div class="col-sm-2" (click)="vegShow('SweetOrange','40','../assets/Sweetlime, Sweet orange.jpg')">
+                        <a href="../assets/Sweetlime, Sweet orange.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Sweetlime, Sweet orange.jpg" class = "img-responsive">
+                        <div class="caption">
+                            <p>Sweet orange</p>
+                        </div> 
+                        </a>
+                        </div>
+                        
+                        <div class="col-sm-2" (click)="vegShow('Sugarcane','30','../assets/Sugarcane.jpg')">
+                            <a href="../assets/Sugarcane.jpg" data-toggle="modal" data-target="#myModal">
+                            <img src="../assets/Sugarcane.jpg"  class = "img-responsive">
+                            <div class="caption">
+                                <p>Sugarcane</p>
+                            </div> 
+                            </a> 
+                      </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Naseberry','130','../assets/Sapota, Naseberry.jpg')">
+                        <a href="../assets/Sapota, Naseberry.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Sapota, Naseberry.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Naseberry</p>
+                        </div>  
+                        </a>
+                    </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Pear','90','../assets/Pear.jpg')">
+                        <a href="../assets/Pear.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Pear.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Pear</p>
+                        </div> 
+                        </a> 
+                    </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Litchi','65','../assets/Lychee, Litchi.jpg')">
+                        <a href="../assets/Lychee, Litchi.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Lychee, Litchi.jpg" class = "img-responsive" >
+                        <div class="caption">
+                            <p>Litchi</p>
+                        </div> 
+                        </a> 
+                    </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Guava','35','../assets/Guava.jpg')">
+                        <a href="../assets/Guava.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Guava.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Guava</p>
+                        </div>
+                        </a>  
+                    </div>
+                    </div>
+                </div>
+                <div class="row" style="background-color: burlywood;margin: 10px;">
+                    <div class="div1">
+                    <div class="col-sm-2" (click)="vegShow('CustardApple','135','../assets/Custard Apple.jpg')">
+                        <a href="../assets/Custard Apple.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Custard Apple.jpg" class = "img-responsive">
+                        <div class="caption">
+                            <p>CustardApple</p>
+                        </div> 
+                        </a>
+                        </div>
+                        
+                        <div class="col-sm-2" (click)="vegShow('Cherry','195','../assets/Cherry.jpg')">
+                            <a href="../assets/Cherry.jpg" data-toggle="modal" data-target="#myModal">
+                            <img src="../assets/Cherry.jpg"  class = "img-responsive">
+                            <div class="caption">
+                                <p>Cherry</p>
+                            </div> 
+                            </a> 
+                      </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Watermelon','23','../assets/Water-melon.jpg')">
+                        <a href="../assets/Water-melon.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Water-melon.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Watermelon</p>
+                        </div>  
+                        </a>
+                    </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Strawberry','80','../assets/Strawberry.jpg')">
+                        <a href="../assets/Strawberry.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Strawberry.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Strawberry</p>
+                        </div> 
+                        </a> 
+                    </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Pomegranate','140','../assets/Pomegranate.jpg')">
+                        <a href="../assets/Pomegranate.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src="../assets/Pomegranate.jpg"  class = "img-responsive">
+                        <div class="caption">
+                            <p>Pomegranate</p>
+                        </div> 
+                        </a> 
+                    </div>
+
+                    <div class="col-sm-2" (click)="vegShow('Pinapple','57','../assets/Pineapple.jpg')">
+                        <a href="../assets/Pineapple.jpg" data-toggle="modal" data-target="#myModal">
+                        <img src='../assets/Pineapple.jpg'  class = "img-responsive">
+                        <div class="caption">
+                            <p>Pinapple</p>
+                        </div> 
+                        </a> 
+                    </div>
+                    </div>
+                </div>
+                <div id="myModal" class="modal" role="dialog" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered" >
+                      <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 *ngIf="addShow" >  <span class="glyphicon glyphicon-ok"></span>Added To cart</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Fruits detail</h4>
+                        </div>
+                        <div class="modal-body">
+                            
+                            <div class="col-sm-4">
+                            <label>
+                                Quantity(in kgs):
+                            </label>
+                            <input type="number" (keyup)="calculatePrice($event)" value="{{fruitdetail.quantity}}" >
+
+                          <p  class="p1">1 kg={{fruitdetail.Price}}</p>
+                          
+                          <div  style="position: absolute;top: 120px;left:15px;">
+                          <label>Total Price:</label>
+                          <input type="number"  value={{value}}  disabled>
+                         </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <p>{{fruitdetail.Name}}</p>
+                                </div>
+                         <div class="col-sm-4">
+                         <img src="{{fruitdetail.img}}" class = "img-responsive"> 
+                         </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning btn-lg"   (click)="addtoCart()" [disabled]="addShow" style="width: 200px; height: 50px; font-size: 20px;" >
+                                Add to Cart</button>
+                          <button type="button" class="btn btn-danger btn-lg"   data-dismiss="modal" style="width: 100px; height: 50px; font-size: 20px;" #closeButton>
+                            Close</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            
+        </body>
+    </html>

@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+              <div class="card card-signin my-5">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Sign In</h5>
+                  <form class="form-signin">
+                    <div class="form-label-group" *ngIf="showEmail">
+                        <label>Email address</label>
+                      <input type="email" id="inputEmail" class="form-control"  name="Email"[(ngModel)]="Email" placeholder="Email address" required autofocus>
+                   
+                    </div>
+      
+                    <div class="form-label-group" *ngIf="showEmail">
+                        <label>Password</label>
+                      <input type="password" id="inputPassword" class="form-control" name="Password" [(ngModel)]="Password" placeholder="Password" required>
+                      
+                      
+                    </div>
+      
+                    <div class="custom-control custom-checkbox mb-3" *ngIf="showEmail">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                      <label class="custom-control-label" for="customCheck1">Remember password</label>
+                      <span><label class="forgotpwd"><a href="#"  data-toggle="modal" data-target="#myModal">Forgot password?</a></label></span>
+                    </div>
+
+                    <div class="form-label-group" *ngIf="!showEmail">
+                      <label >Enter Mobilenumber</label>
+                    <input type="number" id="inputNumber" class="form-control"  placeholder="Enter Number" required>
+                    
+                    
+                  </div>
+                  <div>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" (click)="login()"> Login </button>
+                    </div>
+                    <p>OR</p>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" *ngIf="!showEmail"  (click)="submit()" >Login with email and password</button>
+                    <button type="button" class="btn btn-lg btn-primary btn-block text-uppercase" (click)="submit()" *ngIf="showEmail">Enter Mobilenumber</button>
+                    <br>
+                    <div style="font-size: 20px;" > <a href="#" data-toggle="modal" data-target="#myModal1">
+                      Register for newaccount</a></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="myModal" class="modal" data-backdrop="false">
+            <div class="modal-dialog modal-md modal-dialog-centered" >
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <form [formGroup]="userForm">
+                      <div class="form-group">
+                        <label>Enter your register Mail</label>
+                        <input 
+                        formControlName="regMail"
+                        id="regMail"
+                         type="email" class="form-control"/>
+                         <div class="alert alert-danger" *ngIf="regMail.touched && regMail.invalid">
+                           <div *ngIf="regMail.errors.required">Register Mail is required.</div>
+                           <div *ngIf="regMail.hasError('email') && regMail.dirty">Email must be a valid email address</div>
+                         </div>
+                      </div>
+                      <div class="form-group">
+                        <label>New Password</label>
+                         <input 
+                          formControlName="newPwd" 
+                          id="newPwd"
+                          type="password"  
+                          class="form-control">
+                        <div class="alert alert-danger" *ngIf="newPwd.touched && newPwd.invalid">
+                          <div *ngIf="newPwd.errors.required">New Password is required.</div>
+                        </div>
+                      </div>
+                    
+                      <div class="form-group">
+                        <label>Confirm Password</label>
+                         <input 
+                          formControlName="confirmPwd" 
+                          id="confirmPwd"
+                          type="password"  
+                          class="form-control">
+                        <div class="alert alert-danger" *ngIf="confirmPwd.touched && confirmPwd.invalid">
+                          <div *ngIf="confirmPwd.errors.required">Confirm Password is required.</div>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="confirmPwd.valid &&
+                              confirmPwd.value !=newPwd.value">
+                                Password and Confirm Password does not match
+              
+                        </div>
+                      </div>
+                    
+                      <button class="btn btn-primary"  type="button" data-dismiss="modal" (click)="updatPwd(userForm.value)">Save Password</button>
+                    
+                    </form>
+                  </div>
+                </div>
+                </div>
+                </div>
+
+                <div id="myModal1" class="modal" data-backdrop="false" >
+                  <div class="modal-dialog modal-md modal-dialog-centered" >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <div class="modal-title">Create your account</div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body" style="height: 400px;">
+                        <form #signForm="ngForm"  >
+                          <div class="form-group">
+                            <input 
+                            type="email"  placeholder="Enter Your Email Address"  class="form-control" name="EmailAddress" ngModel>
+                          </div>
+                          <br>
+                          <div class="form-group">
+                            <input  type="number"
+                            placeholder="Enter Your Mobile Number" class="form-control" name="MobileNumber" ngModel>
+                          </div>
+                          <br>
+                          <div class="form-group">
+                            <input type="text"
+                             placeholder="Enter Your Full Name" class="form-control" name="FullName" ngModel>
+                          </div>
+                          <br>
+                          <div class="form-group">
+                            <input type="password"
+                            placeholder="Set Your Password" class="form-control" name="Password" ngModel>
+                          </div>
+                          <br>
+                           
+                          <button class="btn btn-primary btn-lg" type="button" (click)="regAdd(signForm.value)" data-dismiss="modal" >SIGN UP</button>
+                        </form>
+                        
+
+                      </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        
+      </body>
+</html>
